@@ -1,0 +1,148 @@
+/* Create Record Css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin : 10px 0 ;
+}
+.base{
+    height: 200vh;
+    border: 2px solid black;
+    background: url(../static/download.jpg) no-repeat center center/cover;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.form{
+    height: 1000px;
+    width: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.323);
+    background-color: #000000b8;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    color: white;
+}
+#myform{
+    gap: 11px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+#myform label{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 3px 0;
+}
+#myform input{
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+    border-radius: 5px;
+    margin: 2px 0;
+    color: white;
+}
+
+/* Check record */
+
+.checkbase{
+    height: 45%;
+    width: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.323);
+    background-color: #000000b8;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    color: white;
+}
+#checkk{
+    width: 50%;
+    margin: 30px auto;
+}
+#checkk p{
+    margin-top: 9px;
+    margin-bottom: 50px;
+}
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Error Page Css */
+
+.bodyy{
+    height: 100vh;
+    width: 100vw;
+    background: url('/static/download.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxx{
+    height: 500px;
+    width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+    background-color:  #000000b8 ;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+.boxx h1{
+    font-weight: bold;
+    font-size: 70px;
+}
+.boxx i{
+    font-size: 90px;
+}
+.boxx p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 1000;
+}
+.btn1{
+    font-size: 20px;
+    background: none;
+    border-radius:  20px;
+    padding: 12px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.btn1:hover{
+    font-size: 25px;
+    background-color: white;
+}
+.boxx button a:hover{
+    color: black;
+}
+.boxx button a{
+    text-decoration: none;
+    color: white;
+}
+

@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Teacher Page
+  link(rel='stylesheet' href='../static/styles.css')
+  link(rel="stylesheet", href="../static/create.css")
+  script(src='https://kit.fontawesome.com/4f272c0f0e.js' crossorigin='anonymous')
+.base  
+  h1 Teacher Schedule
+  .table
+    table
+      thead
+        tr
+          th Id
+          th Teacher name
+          th Department
+          th 9:10 - 9:50 
+          th 9:50 - 10:30 
+          th 10:30 - 11:10 
+          th 11:10 - 11:50 
+          th 11:50 - 12:30 
+          th 12:30 - 1:10 
+          th 1:40 - 2:20 
+          th 2:20 - 3:00 
+      tbody
+        each teacher in x 
+            tr 
+                td #{teacher.ID} 
+                td #{teacher.TName} 
+                td #{teacher.Dept} 
+                td #{teacher.Lecture1} 
+                td #{teacher.Lecture2} 
+                td #{teacher.Lecture3} 
+                td #{teacher.Lecture4} 
+                td #{teacher.Lecture5} 
+                td #{teacher.Lecture6} 
+                td #{teacher.Lecture7} 
+                td #{teacher.Lecture8}

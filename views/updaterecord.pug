@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Create record
+  link(rel='stylesheet' href='../static/create.css')
+  link(rel='stylesheet' href='../static/styles.css')
+.base
+  h1 Update Record 
+  .form
+    form#myform(action='/update' method='post')
+      label(for='ID') ID:
+      input(type='text' name='ID' placeholder='Enter the Id of teacher')
+      label(for='id') ID:
+      input(type='text' name='id' placeholder='Enter the Updated Id of teacher if Changed.')
+      label(for='TName') Teacher Name:
+      input(type='text' name='TName' placeholder='Enter the Name of teacher')
+      label(for='Dept') Department
+      input(type='text' name='Dept' placeholder='Enter the Department of teacher')
+      label(for='Lecture1') Lecture1
+      input(type='text' name='Lecture1' placeholder='Enter the room no.')
+      label(for='Lecture2') Lecture2
+      input(type='text' name='Lecture2' placeholder='Enter the room no.')
+      label(for='Lecture3') Lecture3
+      input(type='text' name='Lecture3' placeholder='Enter the room no.')
+      label(for='Lecture4') Lecture4
+      input(type='text' name='Lecture4' placeholder='Enter the room no.')
+      label(for='Lecture5') Lecture5
+      input(type='text' name='Lecture5' placeholder='Enter the room no.')
+      label(for='Lecture6') Lecture6
+      input(type='text' name='Lecture6' placeholder='Enter the room no.')
+      label(for='Lecture7') Lecture7
+      input(type='text' name='Lecture7' placeholder='Enter the room no.')
+      label(for='Lecture8') Lecture8
+      input(type='text' name='Lecture8' placeholder='Enter the room no.')
+      button.btn Submit

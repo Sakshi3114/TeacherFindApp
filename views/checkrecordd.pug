@@ -1,0 +1,17 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Check record
+  link(rel='stylesheet' href='../static/create.css')
+  link(rel='stylesheet' href='../static/styles.css')
+.base
+  .checkbase
+    h1 Check Record
+    form#checkk(action='/check' method='post')
+      label(for='TName') Name:
+      input(type='text' name='TName')
+      label(for='Dept') Department:
+      input(type='text' name='Dept')
+      button.btn Search 

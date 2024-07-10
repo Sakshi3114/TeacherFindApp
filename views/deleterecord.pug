@@ -1,0 +1,15 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Check record
+  link(rel='stylesheet' href='../static/create.css')
+  link(rel='stylesheet' href='../static/styles.css')
+.base
+  .checkbase
+    h1 Delete Record
+    form#checkk(action='/delete' method='post')
+      label(for='ID') Identity Number:
+      input(type='text' name='ID')
+      button.btn Delete 

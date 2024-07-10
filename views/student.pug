@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin Page
+  link(rel='stylesheet' href='../static/styles.css')
+  link(rel='stylesheet' href='../static/create.css')
+  script(src='https://kit.fontawesome.com/4f272c0f0e.js' crossorigin='anonymous')
+//-   script(src='../js/index.js')
+.home.background
+  h1 Hello Student! 
+  p You can Check Teacher Schedule using this application!
+.base 
+  .checkbase
+    h1 Check Record
+    form#checkk(action='/check' method='post')
+      label(for='TName') Name:
+      input(type='text' name='TName')
+      p Put a '.' if it is unknown.
+      label(for='Dept') Department:
+      input(type='text' name='Dept')
+      p Put a '.' if it is unknown.
+      button.btn Search

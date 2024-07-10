@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin Page
+  link(rel='stylesheet' href='../static/styles.css')
+  script(src='https://kit.fontawesome.com/4f272c0f0e.js' crossorigin='anonymous')
+//-   script(src='../js/index.js')
+.home.background
+  h1 Hello Admin! 
+  p You can perform following tasks by click onto any of the boxes below..
+.container
+  .adminbox
+    .content
+      i.fa-solid.fa-plus
+      h1 New Record
+      button.btn1
+        a(href='createrecord') Create
+  .adminbox
+    .content
+      i.fa-solid.fa-file
+      h1 Check Record
+      button.btn1 
+        a(href='checkrecord') Check
+  .adminbox
+    .content
+      i.fa-solid.fa-folder-minus
+      h1 Delete Record
+      button.btn1
+        a(href='deleterecord') Delete
+  .adminbox
+    .content
+      i.fa-solid.fa-file-pen
+      h1 Update Record
+      button.btn1 
+        a(href='updaterecord')  Update
+  .adminbox
+    .content
+      i.fa-solid.fa-file
+      h1 Retrieve All
+      button.btn1 
+        a(href='retrieverecord') Retrieve        
