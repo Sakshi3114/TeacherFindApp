@@ -1,50 +1,53 @@
-const path= require('path');
+const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
 const app = express();
-const port = 80;
+const port = process.env.PORT || 3000;
 const hostname = '127.0.0.1';
 
-const mongoose = require('mongoose');
-const db = mongoose.connection;
+// Connect to MongoDB Atlas
+mongoose
+  .connect('mongodb+srv://sharmasakshi3114:sakshi3114@cluster0.1jfiy.mongodb.net/teacher', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch((error) => console.log('Error connecting to MongoDB Atlas:', error));
 
+// Middleware
+app.use('/static', express.static('static')); // Serve static files
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
 
-main().catch(err => console.log(err));
+// PUG Setup
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
-async function main() {
-    
-    await mongoose.connect('mongodb://127.0.0.1:27017/teacher');
- 
- //   use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
-
-//EXPRESS SPECIFIC STUFF
-app.use('/static', express.static('static'));// for serving static files 
-app.use(express.urlencoded());
-
-// PUG SPECIFIC STUFF
-app.set("view engine","pug");// setting template for pug
-app.set("views",path.join(__dirname,"views"));//setting views directory
-
-//Mongoose Schema
+// Mongoose Schema
 const TeacherSchema = new mongoose.Schema({
-    ID : {type:String, required:true},
-    TName : {type: String, required: true },
-    Dept: {type:String, required:true},
-    Lecture1:{type:String},
-    Lecture2:{type:String},
-    Lecture3:{type:String},
-    Lecture4:{type:String},
-    Lecture5:{type:String},
-    Lecture6:{type:String},
-    Lecture7:{type:String},
-    Lecture8:{type:String},
+  ID: { type: String, required: true },
+  TName: { type: String, required: true },
+  Dept: { type: String, required: true },
+  Lecture1: { type: String },
+  Lecture2: { type: String },
+  Lecture3: { type: String },
+  Lecture4: { type: String },
+  Lecture5: { type: String },
+  Lecture6: { type: String },
+  Lecture7: { type: String },
+  Lecture8: { type: String },
 });
-const Teacher = mongoose.model('Teacher', TeacherSchema); 
+const Teacher = mongoose.model('Teacher', TeacherSchema);
 
-//ENDPOINTS
-app.get('/',(req,res)=>{
-    res.status(200).render('base.pug');
+// ENDPOINTS
+app.get('/', (req, res) => {
+  res.status(200).render('base.pug');
 });
+
 app.get('/adminpage1',(req,res)=>{
     try{
         res.render('admin1.pug');
@@ -184,14 +187,3 @@ app.listen(port,()=>{
     console.log(`Server running at http://${hostname}:${port}/`);
     console.log(`The application succesfully started on ${port}`);
 });
-
-
-
-
-
-
-
-
-
-
-
